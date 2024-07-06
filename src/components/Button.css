@@ -1,13 +1,34 @@
 .btn {
-  padding: 10px 20px;
+  padding: 16px 20px;
+  position: relative;
+  background-color: #3737cc;
   font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
   color: white;
+  border-radius: 1.5px;
   border: none;
-  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: -16px;
+  height: 100%;
+  width: 10px;
+  background-color: darkblue;
+  transition: width 0.5s ease;
+  z-index: -1;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.btn:hover::before {
+  width: 120%;
+  /* right: 120px; */
+  border-left: 6px solid #6f6fdf;
+  /* left: 0; */
 }
