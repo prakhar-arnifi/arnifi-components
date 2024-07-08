@@ -6,9 +6,10 @@ export interface ButtonVariants {
   label: string;
   variant: "extra-large" | "large" | "medium" | "small";
   color: "primary" | "secondary" | "tertiary";
+  arrow: boolean;
 }
 
-const Button: React.FC<ButtonVariants> = ({ label, variant, color }) => {
+const Button: React.FC<ButtonVariants> = ({ label, variant, color, arrow }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -33,19 +34,21 @@ const Button: React.FC<ButtonVariants> = ({ label, variant, color }) => {
       onMouseLeave={handleMouseLeave}
     >
       <button className={`btn-${variant} btn-color-${color}`}>{label}</button>
-      <div className={`arrow-wrapper-${variant} arrow-wrapper-${color}`}>
-        <ArrowForward
-          sx={{
-            width:
-              variant === "extra-large"
-                ? "24px"
-                : variant === "large" || variant === "medium"
-                  ? "22px"
-                  : "20px",
-            color: color === "primary" ? "white" : "#0E0B3E",
-          }}
-        />
-      </div>
+      {arrow && (
+        <div className={`arrow-wrapper-${variant} arrow-wrapper-${color}`}>
+          <ArrowForward
+            sx={{
+              width:
+                variant === "extra-large"
+                  ? "24px"
+                  : variant === "large" || variant === "medium"
+                    ? "22px"
+                    : "20px",
+              color: color === "primary" ? "white" : "#0E0B3E",
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

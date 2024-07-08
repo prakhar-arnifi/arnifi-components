@@ -14,6 +14,7 @@ ExtraLarge.args = {
   label: "Extra Large Button",
   variant: "extra-large",
   color: "primary",
+  arrow: false,
 };
 
 export const Large = Template.bind({});
@@ -21,6 +22,7 @@ Large.args = {
   label: "Large Button",
   variant: "large",
   color: "primary",
+  arrow: false,
 };
 
 export const Medium = Template.bind({});
@@ -28,6 +30,7 @@ Medium.args = {
   label: "Medium Button",
   variant: "medium",
   color: "primary",
+  arrow: false,
 };
 
 export const Small = Template.bind({});
@@ -35,4 +38,5 @@ Small.args = {
   label: "Small Button",
   variant: "small",
   color: "primary",
+  arrow: false,
 };

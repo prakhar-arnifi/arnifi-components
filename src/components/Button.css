@@ -198,3 +198,48 @@
 .arrow-wrapper-tertiary {
   background-color: #ededed;
 }
+.btntert-large {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #2424a6;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.btntert-large:hover .btntert-medium:hover .btntert-small:hover {
+  padding-right: 4px;
+}
+.btntert-medium {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #2424a6;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.btntert-small {
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  color: #2424a6;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
